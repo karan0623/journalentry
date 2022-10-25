@@ -1,8 +1,19 @@
 package com.songjournal.journalentry.model;
 
+/**
+ * The UserData class contains all the necessary information about an individual user
+ * Each user is tied to only one journal
+ */
 public class UserData {
 	
+	/**
+	 * The unique identifier of the user
+	 */
 	private int ID;
+	
+	/**
+	 * the spotify ID of the user
+	 */
 	private String spotifyID;
 	
 	public UserData() {

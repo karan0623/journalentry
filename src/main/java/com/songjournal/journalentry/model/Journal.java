@@ -1,9 +1,27 @@
 package com.songjournal.journalentry.model;
 
+/**
+ * Journal is the class used to hold all the information regarding an individual user's journal
+ * Each user will have only 1 Journal and each Journal will have only one user
+ * 
+ *
+ */
+
 public class Journal {
 	
+	/**
+	 * The unique identifier of the journal
+	 */
 	private int ID;
+	
+	/**
+	 * The list of entries tied to the journal
+	 */
 	private String[] entryList;
+	
+	/**
+	 * The ID of the user tied to the journal
+	 */
 	private int userID;
 	
 	public Journal() {
