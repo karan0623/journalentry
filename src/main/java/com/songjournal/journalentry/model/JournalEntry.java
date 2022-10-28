@@ -41,7 +41,7 @@ public class JournalEntry {
 		this.journalID = journalID;
 		this.songList = songList;
 		this.comment = comment;
-		DateTime = dateTime;
+		this.dateTime = dateTime;
 	}
 
 	public int getID() {
@@ -77,11 +77,11 @@ public class JournalEntry {
 	}
 
 	public String getDateTime() {
-		return DateTime;
+		return dateTime;
 	}
 
 	public void setDateTime(String dateTime) {
-		DateTime = dateTime;
+		this.dateTime = dateTime;
 	}
 	
 	
