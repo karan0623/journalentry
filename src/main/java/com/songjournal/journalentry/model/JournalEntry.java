@@ -30,7 +30,7 @@ public class JournalEntry {
 	/**
 	 * the date and time the entry was added
 	 */
-	private String DateTime;
+	private String dateTime;
 	
 	public JournalEntry() {
 		
