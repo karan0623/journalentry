@@ -12,7 +12,7 @@ public class Journal {
 	/**
 	 * The unique identifier of the journal
 	 */
-	private int ID;
+	private int id;
 	
 	/**
 	 * The list of entries tied to the journal
@@ -29,16 +29,16 @@ public class Journal {
 	}
 	
 	public Journal(int iD, String[] entryList, int userID) {
-		ID = iD;
+		id = iD;
 		this.entryList = entryList;
 		this.userID = userID;
 	}
 	
-	public int getID() {
-		return ID;
+	public int getid() {
+		return id;
 	}
-	public void setID(int iD) {
-		ID = iD;
+	public void setid(int iD) {
+		id = iD;
 	}
 	public String[] getEntryList() {
 		return entryList;
