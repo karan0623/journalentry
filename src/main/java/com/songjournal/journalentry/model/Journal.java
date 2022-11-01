@@ -17,7 +17,7 @@ public class Journal {
 	/**
 	 * The list of entries tied to the journal
 	 */
-	private String[] entryList;
+	private String entryList;
 	
 	/**
 	 * The ID of the user tied to the journal
@@ -28,7 +28,7 @@ public class Journal {
 		
 	}
 	
-	public Journal(int iD, String[] entryList, int userID) {
+	public Journal(int iD, String entryList, int userID) {
 		ID = iD;
 		this.entryList = entryList;
 		this.userID = userID;
@@ -40,10 +40,10 @@ public class Journal {
 	public void setID(int iD) {
 		ID = iD;
 	}
-	public String[] getEntryList() {
+	public String getEntryList() {
 		return entryList;
 	}
-	public void setEntryList(String[] entryList) {
+	public void setEntryList(String entryList) {
 		this.entryList = entryList;
 	}
 	public int getUserID() {
