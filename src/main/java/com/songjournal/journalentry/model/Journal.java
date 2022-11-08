@@ -12,6 +12,7 @@ public class Journal {
 	/**
 	 * The unique identifier of the journal
 	 */
+	
 	private int ID;
 	
 	/**
