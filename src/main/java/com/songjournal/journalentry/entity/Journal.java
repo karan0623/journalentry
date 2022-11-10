@@ -1,4 +1,4 @@
-package com.songjournal.journalentry.model;
+package com.songjournal.journalentry.entity;
 
 /**
  * Journal is the class used to hold all the information regarding an individual user's journal

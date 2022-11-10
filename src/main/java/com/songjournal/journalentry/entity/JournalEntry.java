@@ -1,4 +1,4 @@
-package com.songjournal.journalentry.model;
+package com.songjournal.journalentry.entity;
 
 import java.util.Arrays;
 
@@ -15,7 +15,7 @@ import javax.persistence.Table;
  * 
  */
 @Entity
-@Table(name="journalentry")
+@Table(name="journalentries")
 public class JournalEntry {
 	
 	/**
