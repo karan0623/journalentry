@@ -31,7 +31,7 @@ public class JournalEntry {
 	 * the ID of the journal the entry is a part of
 	 */
 	
-	@Column(name="journal_id")
+	@Column(name="journal_ID")
 	private int journalID;
 	
 	/**
