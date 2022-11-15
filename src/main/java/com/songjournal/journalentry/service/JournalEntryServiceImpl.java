@@ -1,6 +1,7 @@
 package com.songjournal.journalentry.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,20 +30,28 @@ public class JournalEntryServiceImpl implements JournalEntryService {
 
 	@Override
 	public JournalEntry findById(int theId) {
-		// TODO Auto-generated method stub
-		return null;
+
+		Optional<JournalEntry> journalEntryId = journalEntryRepository.findById(theId);
+		
+		JournalEntry theJournalEntry = null;
+		if(journalEntryId.isPresent()){
+			theJournalEntry = journalEntryId.get();
+		} else {
+			//Faculty not found
+			throw new RuntimeException("The JounrnalEntryId you've entered is invalid - " + theId);
+		}
+		return theJournalEntry;
 	}
 
 	@Override
 	public void save(JournalEntry theJournalEntry) {
-		// TODO Auto-generated method stub
+		journalEntryRepository.save(theJournalEntry);
 
 	}
 
 	@Override
 	public void deleteById(int theId) {
-		// TODO Auto-generated method stub
-
+		journalEntryRepository.deleteById(theId);
 	}
 
 }
