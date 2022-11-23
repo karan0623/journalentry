@@ -44,6 +44,9 @@ public class JournalEntry {
 		DateTime = dateTime;
 	}
 
+	/**
+	 * Getters and Setters
+	 */
 	public int getID() {
 		return ID;
 	}
