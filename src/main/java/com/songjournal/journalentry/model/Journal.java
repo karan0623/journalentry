@@ -22,12 +22,15 @@ public class Journal {
 	public Journal() {
 		
 	}
-	
+
 	public Journal(int iD, int userID) {
 		ID = iD;
 		this.userID = userID;
 	}
 	
+	/**
+	 * Getters and Setters for ID and userID
+	 */
 	public int getID() {
 		return ID;
 	}
