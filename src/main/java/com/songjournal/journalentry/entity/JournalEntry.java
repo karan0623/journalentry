@@ -1,6 +1,6 @@
 package com.songjournal.journalentry.entity;
 
-import java.util.Arrays;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,54 +10,55 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * Each JournalEntry contains a single entry tied to a users journal
- * Each journal can have many entries but every entry is tied to only one journal and by extension, one user
+ * Each JournalEntry contains a single entry tied to a users journal Each
+ * journal can have many entries but every entry is tied to only one journal and
+ * by extension, one user
  * 
  */
 @Entity
-@Table(name="journalentries")
+@Table(name = "journalentries")
 public class JournalEntry {
-	
+
 	/**
 	 * The unique identifier of each individual entry
 	 */
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	
-	@Column(name="ID")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+
+	@Column(name = "ID")
 	private int ID;
-	
+
 	/**
 	 * the ID of the journal the entry is a part of
 	 */
-	
-	@Column(name="journal_ID")
+
+	@Column(name = "journal_ID")
 	private int journalID;
-	
+
 	/**
 	 * the song, or list of songs, tied to the entry
 	 */
-	@Column(name="song_list")
-	private String[] songList;
-	
+	@Column(name = "song_list")
+	private String songList;
+
 	/**
 	 * The comment associated with the entry
 	 */
-	@Column(name="comment")
+	@Column(name = "comment")
 	private String comment;
-	
+
 	/**
 	 * the date and time the entry was added
 	 */
-	@Column(name="date_time")
+	@Column(name = "date_time")
 	private String DateTime;
-	
+
 	public JournalEntry() {
-		
+		this.DateTime = LocalDate.now().toString();
 	}
-	
-	public JournalEntry(int id, int journalID, String[] songList, String comment, String dateTime) {
-		//super();
+
+	public JournalEntry(int id, int journalID, String songList, String comment, String dateTime) {
+		// super();
 		this.ID = id;
 		this.journalID = journalID;
 		this.songList = songList;
@@ -81,11 +82,11 @@ public class JournalEntry {
 		this.journalID = journalID;
 	}
 
-	public String[] getSongList() {
+	public String getSongList() {
 		return songList;
 	}
 
-	public void setSongList(String[] songList) {
+	public void setSongList(String songList) {
 		this.songList = songList;
 	}
 
@@ -107,19 +108,10 @@ public class JournalEntry {
 
 	@Override
 	public String toString() {
-		return "JournalEntry [ID=" + ID + ", journalID=" + journalID + ", songList=" + Arrays.toString(songList)
-				+ ", comment=" + comment + ", DateTime=" + DateTime + ", getID()=" + getID() + ", getJournalID()="
-				+ getJournalID() + ", getSongList()=" + Arrays.toString(getSongList()) + ", getComment()="
-				+ getComment() + ", getDateTime()=" + getDateTime() + "]";
+		return "JournalEntry [ID=" + ID + ", journalID=" + journalID + ", songList=" + songList + ", comment=" + comment
+				+ ", DateTime=" + DateTime + ", getID()=" + getID() + ", getJournalID()=" + getJournalID()
+				+ ", getSongList()=" + getSongList() + ", getComment()=" + getComment() + ", getDateTime()="
+				+ getDateTime() + "]";
 	}
-
-	
-
-
-	
-	
-	
-	
-	
 
 }

@@ -9,19 +9,16 @@ import org.springframework.stereotype.Service;
 import com.songjournal.journalentry.dao.JournalEntryRepository;
 import com.songjournal.journalentry.entity.JournalEntry;
 
-
-
 @Service
 public class JournalEntryServiceImpl implements JournalEntryService {
 
-	
 	private JournalEntryRepository journalEntryRepository;
-	
+
 	@Autowired
-	public JournalEntryServiceImpl(JournalEntryRepository theJournalEntryRepository){
+	public JournalEntryServiceImpl(JournalEntryRepository theJournalEntryRepository) {
 		journalEntryRepository = theJournalEntryRepository;
 	}
-	
+
 	@Override
 	public List<JournalEntry> findAll() {
 		// TODO Auto-generated method stub
@@ -32,12 +29,12 @@ public class JournalEntryServiceImpl implements JournalEntryService {
 	public JournalEntry findById(int theId) {
 
 		Optional<JournalEntry> journalEntryId = journalEntryRepository.findById(theId);
-		
+
 		JournalEntry theJournalEntry = null;
-		if(journalEntryId.isPresent()){
+		if (journalEntryId.isPresent()) {
 			theJournalEntry = journalEntryId.get();
 		} else {
-			//Faculty not found
+			// Journal Entry Not Found
 			throw new RuntimeException("The JounrnalEntryId you've entered is invalid - " + theId);
 		}
 		return theJournalEntry;
