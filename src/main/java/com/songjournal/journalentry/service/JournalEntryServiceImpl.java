@@ -22,7 +22,7 @@ public class JournalEntryServiceImpl implements JournalEntryService {
 	@Override
 	public List<JournalEntry> findAll() {
 		// TODO Auto-generated method stub
-		return journalEntryRepository.findAll();
+		return journalEntryRepository.findAllByOrderByIDDesc();
 	}
 
 	@Override
