@@ -18,13 +18,14 @@ public class JournalEntryServiceImpl implements JournalEntryService {
 	public JournalEntryServiceImpl(JournalEntryRepository theJournalEntryRepository) {
 		journalEntryRepository = theJournalEntryRepository;
 	}
-
+	
+	//This method finds all journal entries and orders them by Id Descending
 	@Override
 	public List<JournalEntry> findAll() {
-		// TODO Auto-generated method stub
 		return journalEntryRepository.findAllByOrderByIDDesc();
 	}
 
+	//This method is used to find journal entries using their Id.
 	@Override
 	public JournalEntry findById(int theId) {
 
@@ -39,13 +40,15 @@ public class JournalEntryServiceImpl implements JournalEntryService {
 		}
 		return theJournalEntry;
 	}
-
+	
+	//This method handles the saving of journal entries
 	@Override
 	public void save(JournalEntry theJournalEntry) {
 		journalEntryRepository.save(theJournalEntry);
 
 	}
 
+	//This method handles the deleting of journal entries.
 	@Override
 	public void deleteById(int theId) {
 		journalEntryRepository.deleteById(theId);

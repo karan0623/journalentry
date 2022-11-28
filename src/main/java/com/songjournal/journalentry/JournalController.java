@@ -23,13 +23,7 @@ public class JournalController {
 		journalEntryService = theJournalEntryService;
 	}
 
-	// Mapping for "sign-in"
-	@GetMapping("/sign-in")
-	public String signIn() {
-		return "sign-in";
-
-	}
-
+	
 	// Mapping for "home"
 	@GetMapping("/home")
 	public String home(Model theModel) {

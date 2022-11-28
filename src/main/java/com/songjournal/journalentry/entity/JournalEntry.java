@@ -53,6 +53,7 @@ public class JournalEntry {
 	@Column(name = "date_time")
 	private String DateTime;
 
+	//Default constructor to create date/time
 	public JournalEntry() {
 		this.DateTime = LocalDate.now().toString();
 	}
