@@ -15,8 +15,8 @@
 	      <div class="container-fluid">
 	        <a class="navbar-brand md-0 h2" style="font-size: 28px" href="/home">Song Journal</a>
 	        <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
-	          <li class="nav-item">
-	            <a class="nav-link active" aria-current="page" href="/about">About</a>
+	        <li class="nav-item">
+	            <a class="nav-link" aria-current="page" href="/home">Home</a>
 	          </li>
 	        </ul>
 	        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
@@ -62,7 +62,7 @@
 	  </header>
 	
 	
-	  <div class="container-md min-vh-100 bg-dark border border-secondary" style="padding-top: 105px;">
+	  <div class="container-md min-vh-100 bg-dark border border-secondary" style="padding-top: 5rem;">
 	    <main role="main" class="pb-3">
 	      <div class="row text-center justify-content-center">
 	        <h4 class="text-bg-dark mb-3" th:text="${journalEntry.ID} ? 'Edit Journal Entry' : 'Add New Journal Entry'">

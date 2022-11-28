@@ -16,7 +16,7 @@
 	        <a class="navbar-brand md-0 h2" style="font-size: 28px" href="#">Song Journal</a>
 	        <ul class="navbar-nav ms-auto me-5 mb-2 mb-lg-0">
 	          <li class="nav-item">
-	            <a class="nav-link active" aria-current="page" href="/about">About</a>
+	            <a class="nav-link" aria-current="page" href="/about">About</a>
 	          </li>
 	        </ul>
 	        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
@@ -61,14 +61,10 @@
 	    </nav>
 	  </header>
 	
+	<a th:href="@{/add}" class="btn btn-outline-light btn-dark shadow" style="position: fixed; bottom: 1.5rem; right: 1.5rem; margin: 0; font-size: 32px;" href="#"><i class="bi bi-plus-lg"></i> NEW ENTRY</a>
 	
-	  <div class="container-md min-vh-100 bg-dark border border-secondary" style="padding-top: 105px;">
-	    <main role="main" class="pb-3">
-	      <div class="row">
-	        <div class="col mb-3">
-	          <a th:href="@{/add}" class="btn btn-outline-light"> Add New Journal Entry </a>
-	        </div>
-	      </div>
+	  <div class="container-md min-vh-100 bg-dark border-start border-end border-secondary" style="padding-top: 5rem;">
+	    <main role="main" style="padding-bottom: 6rem;">
 	      <div class="row text-center justify-content-center">
 	
 	        <!-- Entry -->
